@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="250.0" prefHeight="454.0" prefWidth="499.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="wizardchat.FormaController">
+    <stylesheets>
+        <URL value="@forma.css" />
+    </stylesheets>
+   <children>
+      <TextArea fx:id="editText" layoutX="21.0" layoutY="390.0" prefHeight="42.0" prefWidth="349.0" />
+      <ImageView fitHeight="26.0" fitWidth="150.0" layoutX="21.0" layoutY="21.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/wizard.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="419.0" layoutY="22.0" mnemonicParsing="false" onAction="#onClickCancel" prefHeight="25.0" prefWidth="25.0" text="  " underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="452.0" layoutY="22.0" mnemonicParsing="false" onAction="#onClickExit" prefHeight="25.0" prefWidth="25.0" text="X">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ToggleButton focusTraversable="false" layoutX="386.0" layoutY="22.0" mnemonicParsing="false" onAction="#onClickOnTop" text="^">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ToggleButton>
+      <TabPane fx:id="tabPane" layoutX="21.0" layoutY="57.0" prefHeight="324.0" prefWidth="456.0" side="LEFT" style="-fx-border-width: 1; -fx-border-color: #b5b5b5;" tabClosingPolicy="ALL_TABS">
+        <tabs>
+          <Tab fx:id="mainTab" closable="false" text="Основной">
+               <content>
+                  <ScrollPane fx:id="scrollPane" focusTraversable="false" hbarPolicy="NEVER" prefHeight="324.0" prefWidth="491.0" styleClass="scrollClass">
+                     <content>
+                        <VBox fx:id="scrollVBox" prefHeight="39.0" prefWidth="424.0" />
+                     </content>
+                  </ScrollPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Separator fx:id="resizer" layoutX="21.0" layoutY="440.0" prefWidth="460.0">
+         <cursor>
+            <Cursor fx:constant="V_RESIZE" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Separator>
+      <MenuButton fx:id="userSelector" focusTraversable="false" layoutX="336.0" layoutY="22.0" mnemonicParsing="false" text="+">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuButton>
+      <SplitMenuButton fx:id="btnSend" layoutX="377.0" layoutY="399.0" mnemonicParsing="false" onAction="#onClickDone" text="Отправить">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#sendFile" text="Отправить файл" />
+            <MenuItem mnemonicParsing="false" onAction="#onSmile" text="Смайлы" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </SplitMenuButton>
+   </children>
+</AnchorPane>

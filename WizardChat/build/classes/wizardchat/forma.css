@@ -1,0 +1,32 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+    //-fx-background-color: rgba(255, 255, 255, 1);
+    -fx-effect: dropshadow(gaussian, grey, 10, 0, 0, 0);
+    -fx-background-insets: 10;
+    -fx-background-radius: 5;
+    -fx-border-width: 1;
+    -fx-border-color: #696969;
+    -fx-border-insets: 10;
+    -fx-border-radius: 5;
+}
+
+.scrollClass {
+    -fx-border-color:#f3f3f3;
+}
+
+.scrollClass:focused {   
+    -fx-focus-traversable:false;
+    -fx-focus-color: #f3f3f3, #f3f3f3;
+    -fx-faint-focus-color: #f3f3f3, #f3f3f3;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid;
+}
+
+.nameLabel{
+    -fx-font-weight:bold;
+    
+}
+
